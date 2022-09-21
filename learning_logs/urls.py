@@ -16,4 +16,7 @@ urlpatterns = [
     # Specific section for a certain topic
     path('topics/<int:topic_id>', views.topic, name='topic'),
 
+    #Adding new topic
+    path('new_topic/', views.new_topic, name='new_topic'),
+
 ]
