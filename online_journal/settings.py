@@ -129,3 +129,5 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-marosan28-onlinejournal-05cqy99iy7j.ws-eu64.gitpod.io']
+
+LOGIN_URL = 'users:login'
