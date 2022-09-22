@@ -133,7 +133,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-marosan28-onlinejournal-lrgqt12915g.ws-eu64.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-marosan28-onlinejournal-qcvbhnxlnn5.ws-eu67.gitpod.io']
 
 LOGIN_URL = 'users:login'
 

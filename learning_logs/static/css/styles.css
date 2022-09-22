@@ -29,6 +29,9 @@ a.register{
 .nav-item, .nav-link {
     color: rgb(255 255 255);
 }
+.list-group-item a {
+color: black;
+}
 /* Index html */
 
 main.container {
@@ -38,7 +41,9 @@ main.container {
 #jumbotron {
     padding: 0;
 }
-
+.add-topic {
+    color: black;
+}
 /* Media queries */
 
 
