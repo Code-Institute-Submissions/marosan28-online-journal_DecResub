@@ -2,19 +2,30 @@
 * {
     font-family: 'Sura', sans-serif;
     font-size: large;
-
 }
 .navbar {
-    background-color:rgba(158, 94, 42, 0.747)
+    background-color:rgba(158, 94, 42, 0.747);
 }
 .navbar-brand {
+    color: rgb(255 255 255);
     text-transform: uppercase;
-    letter-spacing: 10px;
 }
 .bookmark {
     font-size: 1.3rem;
 }
+
+a.register{
+    background-color: #28a745;
+}
+.nav-item, .nav-link {
+    color: rgb(255 255 255);
+}
+
 /* Media queries */
+
+
+/* Small screens */
+
 @media (max-width: 768px) { 
 .nav-item {
     border-bottom: 1px solid black;
@@ -26,4 +37,34 @@
 .bookmark {
     font-size: .8rem;
 }
+
+/* Base Html */
+
+
+.display-3 {
+    font-size: medium;
+}
+.lead {
+    font-size: small;
+}
+.register {
+    font-size: small;
+}
+.navbar-toggler-icon {
+    height: 20px;
+    width: 20px;
+}
+}
+
+/* Medium screens */
+@media (max-width: 992px) and (min-width: 768px){ 
+    .display-3 {
+        font-size: large;
+    }
+    .lead {
+        font-size: medium;
+    }
+    .register {
+        font-size: medium;
+    }
 }

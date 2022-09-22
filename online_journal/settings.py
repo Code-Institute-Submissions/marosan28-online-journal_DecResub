@@ -9,11 +9,12 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 from pathlib import Path
 import os
 BASE_DIR = os.path.dirname(__file__)
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
     'users',
     # Third party
     'bootstrap4',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -135,9 +137,15 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-marosan28-onlinejournal-05cqy99iy7j.ws-eu64.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-marosan28-onlinejournal-lrgqt12915g.ws-eu64.gitpod.io']
 
 LOGIN_URL = 'users:login'
+# Add config
+cloudinary.config(
+    cloud_name="dd9o1h7oh",
+    api_key="522695269739824",
+    api_secret="oa4_FiNurIBFcShGyu3gXGAEpeM"
 
+)
 import mimetypes
 mimetypes.add_type("text/css", ".css", True)
