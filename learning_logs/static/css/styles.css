@@ -1,6 +1,29 @@
-.navbar {
-    background-color:rgba(103, 199, 154, 0.747)
+@import url('https://fonts.googleapis.com/css2?family=Sura&display=swap');
+* {
+    font-family: 'Sura', sans-serif;
+    font-size: large;
+
 }
-body {
-    background-color: blue;
+.navbar {
+    background-color:rgba(158, 94, 42, 0.747)
+}
+.navbar-brand {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+.bookmark {
+    font-size: 1.3rem;
+}
+/* Media queries */
+@media (max-width: 768px) { 
+.nav-item {
+    border-bottom: 1px solid black;
+}
+.navbar-brand {
+    font-size: 1rem;
+    letter-spacing: 7px;
+}
+.bookmark {
+    font-size: .8rem;
+}
 }
