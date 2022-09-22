@@ -2,15 +2,15 @@
 
 
 {% block page_header %}
-  <p><a class="topic-on-hand" href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></p>
+  <p><a class="topic-on-hand topic-edit" href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></p>
 {% endblock page_header %}
 
 {% block content %}
-  <p>Add a new entry:</p>
+  <h3>Add a new entry:</h3>
   <form action="{% url 'learning_logs:new_entry' topic.id %}" method='post'>
     {% csrf_token %}
     {{ form.as_p }}
-    <button name='submit'>Add entry</button>
+    <button name='submit' class="btn btn-secondary">Add entry</button>
   </form>
     
 {% endblock content %}

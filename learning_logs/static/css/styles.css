@@ -47,6 +47,10 @@ color: black;
 }
 .topic-on-hand {
     text-decoration: underline;
+    color: black;
+}
+.topic-edit {
+    font-size: xx-large;
 }
 /* Index html */
 
