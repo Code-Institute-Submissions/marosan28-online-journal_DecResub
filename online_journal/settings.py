@@ -15,6 +15,10 @@ import dj_database_url
 if os.path.isfile('env.py'):
     import env
 
+import mimetypes
+
+
+development = os.environ.get('DEVELOPMENT', False)
 
 BASE_DIR = os.path.dirname(__file__)
 
@@ -27,12 +31,15 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', '')
+SECRET_KEY = os.environ.get('SECRET_KEY', 'kingolina??25')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = development
 
-ALLOWED_HOSTS = ['online-journal2022.herokuapp.com', 'localhost', '127.0.0.1']
+if development:
+    ALLOWED_HOSTS = ['localhost']
+else:
+    ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
 
 
 # Application definition
@@ -50,7 +57,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'users',
-    # Third party
     'bootstrap4',
 ]
 
@@ -88,16 +94,17 @@ WSGI_APPLICATION = 'online_journal.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-# }
-
-DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
- }
+if development:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+else:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
 
 
 # Password validation
@@ -136,7 +143,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -154,5 +161,13 @@ CSRF_TRUSTED_ORIGINS = ['online-journal2022.herokuapp.com']
 
 LOGIN_URL = 'users:login'
 
-import mimetypes
+# Cloudinary Settings
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dd9o1h7oh',
+    'API_KEY': '522695269739824',
+    'API_SECRET': 'oa4_FiNurIBFcShGyu3gXGAEpeM',
+}
+
+
 mimetypes.add_type("text/css", ".css", True)
