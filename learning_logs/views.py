@@ -36,6 +36,7 @@ def new_topic(request):
         form = TopicForm(data=request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, "Topic successfully added!")
             return redirect('learning_logs:topics')
     else:
         # No data submitted return blank form.
@@ -43,7 +44,6 @@ def new_topic(request):
     # Show a blank or incomplete form.
     context = {'form': form}
     return render(request, 'learning_logs/new_topic.html', context)
-
 
 @login_required
 def new_entry(request, topic_id):
@@ -84,3 +84,16 @@ def edit_entry(request, entry_id):
 
     context = {'entry': entry, 'topic': topic, 'form': form}
     return render(request, 'learning_logs/edit_entry.html', context)
+# Delete Entry
+
+@login_required
+def delete_entry(request, entry_id):
+    """Delete an entry."""
+    entry = get_object_or_404(Entry, id=entry_id)
+    topic = entry.topic
+    if request.method == 'POST':
+        entry.delete()
+        messages.success(request, "Entry deleted successfully!")
+        return redirect('learning_logs:topic', topic_id=topic.id)
+    context = {'entry': entry, 'topic': topic}
+    return render(request, 'learning_logs/delete_entry.html', context)
