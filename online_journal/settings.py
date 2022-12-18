@@ -10,13 +10,16 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 from pathlib import Path
+
 from django.contrib.messages import constants as messages
 import os
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
-
 import mimetypes
+
+
+
 
 
 MESSAGE_TAGS = {
@@ -56,6 +59,7 @@ else:
 INSTALLED_APPS = [
     # My apps
     'learning_logs',
+    'users',
     # Default apps
     'django.contrib.admin',
     'django.contrib.auth',
@@ -65,7 +69,6 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
-    'users',
     'bootstrap4',
 ]
 
@@ -177,6 +180,5 @@ CLOUDINARY_STORAGE = {
     'API_KEY': '522695269739824',
     'API_SECRET': 'oa4_FiNurIBFcShGyu3gXGAEpeM',
 }
-
 
 mimetypes.add_type("text/css", ".css", True)

@@ -1,8 +1,16 @@
-from django.shortcuts import render
-
 from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.urls import reverse
+from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
+
+def logout_view(request):
+    """Log the user out."""
+    logout(request)
+    return redirect(reverse('learning_logs:index'))
+
 
 def register(request):
     """Register a new user."""
