@@ -60,6 +60,7 @@ def new_entry(request, topic_id):
             new_entry = form.save(commit=False)
             new_entry.topic = topic
             new_entry.save()
+            messages.success(request, "New entry added successfully!")
             return redirect('learning_logs:topic', topic_id=topic_id)
     context = {'topic': topic, 'form': form}
     return render(request, 'learning_logs/new_entry.html', context)
