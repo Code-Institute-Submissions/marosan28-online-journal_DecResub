@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 from .models import Topic, Entry
 from .forms import TopicForm, EntryForm
@@ -77,6 +78,7 @@ def edit_entry(request, entry_id):
         form = EntryForm(instance=entry, data=request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, "Entry successfully edited!")
             return redirect('learning_logs:topic', topic_id=topic.id)
 
     context = {'entry': entry, 'topic': topic, 'form': form}
