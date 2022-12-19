@@ -162,6 +162,10 @@ The **Sura** font is a geometric sans-serif font designed by Carolina Giovagnoli
 
 - Sharing functionality: Allow users to share articles or topics with their friends or colleagues via social media or email.
 
+- Customizable font: Allow users to change size and style of the text on the website so that it is easier for individuals to read.
+
+- View analytics data about website usage:  Allow admin to view analytics data about website usage so he can understand how users are interacting with the website. 
+
 
 ## Issues and Bugs 
 
