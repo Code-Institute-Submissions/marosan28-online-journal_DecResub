@@ -142,7 +142,19 @@ The **Sura** font is a geometric sans-serif font designed by Carolina Giovagnoli
 
 ### Design Features
 
-- Navigation bar will allow user to navigate from page to page easily on all devices.
+1. Navbar with login/logout options - Our app has a navbar at the top of the screen that includes a login/logout option for logged-in users. This allows users to easily access their account and manage their session.
+
+2. App name in navbar - The name of the app is displayed on the right side of the navbar, making it easy for users to identify the app and navigate to different areas of the site.
+
+3. Jumbotron for registration - The landing page of our app includes a jumbotron that allows users to register for a new account. This feature is prominently displayed to make it easy for new users to get started with the app.
+
+4. Search button and list of topics - After logging in or registering, users can access a search button that shows them a list of topics. This feature allows users to easily browse and find topics they are interested in.
+
+5. Button for adding new topics - At the bottom of the list of topics, there is a button that allows users to add a new topic. This feature is useful for users who want to explore new areas of knowledge and share their interests with others.
+
+6. Topic entries page - After clicking on a specific topic, users are taken to a page where they can view the topic's entries. This page also includes options to edit or delete entries, allowing users to manage their journal and keep it organized.
+
+7. Alert messages - Every time a topic is edited, a message is displayed to inform the user of the update. This helps users stay informed about changes to their journal and allows them to easily track their progress.
 
 ### Features to Implement
 
