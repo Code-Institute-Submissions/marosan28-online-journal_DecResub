@@ -1,11 +1,11 @@
 {% extends 'learning_logs/base.html' %}
 
 {% block page_header %}
-<h3 class="topic-on-hand">{{ topic }}</h3>
+<h3 class="topic-on-hand"><a class="btn btn-secondary go-back" href="javascript:history.back()">Go back</a> {{ topic }}</h3>
+
 {% endblock page_header %}
 
 {% block content %}
-<a class="btn btn-secondary go-back" href="javascript:history.back()">Go back</a>
 <ul>
   {% for entry in entries %}
   <div class="card mb-3">
