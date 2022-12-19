@@ -120,9 +120,7 @@ Overall, the colors in this palette are chosen to be non-distracting and calming
 
 #### Typography
 
-
 The **Sura** font is a geometric sans-serif font designed by Carolina Giovagnoli. It is a modern and clean font with a straightforward, no-nonsense design. The geometric shapes and clean lines of Sura give it a strong, futuristic look that is ideal for technology-focused projects. Sura was used for headings and other spotlight elements to create a clean, modern look.  For the body font I choose **Merriweather**. Merriweather is a serif font that is clean and modern, with a slightly more formal and traditional feel than Sura. I used it to provide a nice contrast to Sura's strong, geometric style.
-
 
 ## Features
 
@@ -158,7 +156,11 @@ The **Sura** font is a geometric sans-serif font designed by Carolina Giovagnoli
 
 ### Features to Implement
 
-- Need to add liking section. 
+- Liking system: Allow users to like and save articles or topics that they find particularly interesting or useful.
+
+- Commenting system: Allow users to leave comments or feedback on articles or topics, either publicly or privately.
+
+- Sharing functionality: Allow users to share articles or topics with their friends or colleagues via social media or email.
 
 
 ## Issues and Bugs 
