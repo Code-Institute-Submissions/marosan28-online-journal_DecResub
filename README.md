@@ -23,7 +23,7 @@ We hope you enjoy using the Online Journal app!
      2. [Additional Languages Used](#Additional-Languages-Used)
      3. [Frameworks, Libraries & Programs Used](#Frameworks,-Libraries-&-Programs-Used)
 5. [Testing](#Testing)
-     1. [Testing.md](TESTING.md)
+     1. [Testing](TESTING)
 6. [Deployment](#Deployment)
      1. [Deploying on Heroku](#Deploying-on-Heroku)
      2. [Forking the Repository](#Forking-the-Repository)
@@ -260,8 +260,31 @@ Automated unit testing was done within Django.
 | 10 | Site Admin  | enable or disable features or functionality| customize the experience of the user        | when the enable/disable feature is used    |
 
 
+## Responsivness Testing
+In progress
 
-	
+## HTML Testing
+
+
+| HTML document  | Result | Issues found                                                            | Fixes made                                                            |
+|----------------|--------|-------------------------------------------------------------------------|-----------------------------------------------------------------------|
+| messages.html  | Fail   |1. Non-space characters found without seeing a doctype first.            |1. Added a DOCTYPE declaration at the beginning of the HTML code       |
+|                |        |2. Element head is missing a required instance of child element title.   |2. Added a title element inside the head                               |
+|                |        |3. Bad value True for attribute aria-hidden on element span.             |3. Change the value of the aria-hidden attribute to "true" (lowercase) |
+
+## CSS Testing
+
+The app's CSS file was tested using W3C CSS Validator. The CSS was free of errors and passed the validation process.
+
+<p>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" />
+    </a>
+</p>
+
+In addition to using the W3C CSS Validator, the app's CSS was also manually tested by visually inspecting the app's pages in various web browsers to ensure that the styles were being applied correctly and consistently across different devices and platforms.
 
 
 
