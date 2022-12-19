@@ -175,7 +175,7 @@ The **Sura** font is a geometric sans-serif font designed by Carolina Giovagnoli
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript "Link to JavaScript Wiki")
-- [Python](https://en.wikipedia.org/wiki/Python_(programming_language)
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 ## Frameworks - Libraries - Programs Used
 - [Django](https://www.djangoproject.com/)
@@ -243,6 +243,25 @@ Automated unit testing was done within Django.
 |   Edit entry button                           | User input     |  Redirects to form for editing entry                      | PASS          |
 |   Delete entry button                         | User input     |  Redirects to "Are you sure?" page and removes entry      | PASS          |
 |   Django messages+Bootstrap alert             | User input     |  Displays alert after making changes                      | PASS          |
+
+## User Stories Testing
+
+| #  | As a/an     | I want to be able to...                    | So that I can...                            | Achieved on...                             |
+|----|-------------|--------------------------------------------|---------------------------------------------|--------------------------------------------|
+| 1  | User        | log in to the website                      | access my account and topics                | Login page                                 |
+| 2  | User        | add a new topic                            | track and revisit information               | New topic form                             |
+| 3  | User        | view a post's entirety                     | learn more about a topic	               | Post details page                          |
+| 4  | User        | delete entries                             | remove incorrect or outdated information    | Entry delete confirmation page             |
+| 5  | User        | edit entries                               | update or correct information               | Entry edit form                            |
+| 6  | User        | create an account                          | access the website and track topics         | Register page                              |
+| 7  | Site Admin  | restrict access to Topics page             | control user access to certain content      | Topics page                                |
+| 8  | Site Admin  | modify the appearance and layout           | improve the user experience                 | App pages                                  |
+| 9  | Site Admin  | create and manage categories or tags       | help users organize and classify topics     | Categories/tags management page            |
+| 10 | Site Admin  | enable or disable features or functionality| customize the experience of the user        | when the enable/disable feature is used    |
+
+
+
+	
 
 
 
