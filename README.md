@@ -11,29 +11,28 @@ We hope you enjoy using the Online Journal app!
 [View the live project here](https://online-journal2022.herokuapp.com/ "Link to deployed site - Online Journal")
 
 ## Table of contents
-1. [Introduction](#Introduction)
-2. [UX](#UX)
+1. [UX](#UX)
     1. [User Stories](#User-Stories)
     2. [Design](#Design)
 2. [Features](#Features)
     1. [Existing Features](#Existing-Features)
     2. [Features to Implement in the future](#Features-to-Implement-in-the-future)
-4. [Issues and Bugs](#Issues-and-Bugs)
-5. [Technologies Used](#Technologies-Used)
+3. [Issues and Bugs](#Issues-and-Bugs)
+4. [Technologies Used](#Technologies-Used)
      1. [Main Languages Used](#Main-Languages-Used)
      2. [Additional Languages Used](#Additional-Languages-Used)
      3. [Frameworks, Libraries & Programs Used](#Frameworks,-Libraries-&-Programs-Used)
-6. [Testing](#Testing)
+5. [Testing](#Testing)
      1. [Testing.md](TESTING.md)
-7. [Deployment](#Deployment)
+6. [Deployment](#Deployment)
      1. [Deploying on Heroku](#Deploying-on-Heroku)
      2. [Forking the Repository](#Forking-the-Repository)
      3. [Creating a Clone](#Creating-a-Clone)
-8. [Credits](#Credits)
+7. [Credits](#Credits)
      1. [Content](#Content)
      2. [Media](#Media)
      3. [Code](#Code)
-9. [Acknowledgements](#Acknowledgements)
+8. [Acknowledgements](#Acknowledgements)
 ***
 ## UX 
 
@@ -49,6 +48,14 @@ We hope you enjoy using the Online Journal app!
 
 #### Site Admin:
 1. As a **site Admin** I can **restrict access to Topics page.**
+
+
+1. As a user of the Online Journal app, you have the ability to log in the topics you have an interest in. This feature allows you to easily track and revisit the information you are learning about, helping you stay organized and focused on your goals.
+
+To log in a topic, simply navigate to the appropriate section of the app and enter the topic you are interested in. You can then add notes and comments about your progress as you learn more about the topic.
+
+The ability to log in and track your interests is a key feature of the Online Journal app, and it is designed to make it easy for you to stay organized and focused on your goals. Whether you are a student, professional, or lifelong learner, this feature can help you get the most out of your learning experience. So, it will be very helpful for you to use this feature and make the most out of it. 
+
 
 ### Design
 
