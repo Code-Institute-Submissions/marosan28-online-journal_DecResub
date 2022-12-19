@@ -126,11 +126,23 @@ The **Sura** font is a geometric sans-serif font designed by Carolina Giovagnoli
 
 ## Features
 
+1. Topic tracking and revisiting - Our app allows users to log in topics they are interested in as a way of tracking and revisiting the information. This feature is useful for users who want to keep track of their interests and learn more about specific subjects.
+
+2. Adding new topics - Our app allows users to add new topics about subjects they are interested in. This feature is useful for users who want to explore new areas of knowledge and share their interests with others.
+
+3. Viewing full post - Our app allows users to view the entirety of a post by clicking on it. This feature is useful for users who want to read more about a specific topic or get a better understanding of the information being presented.
+
+4. Deleting entries - Our app allows users to delete entries they no longer need or want. This feature is useful for users who want to keep their journal organized and free of clutter.
+
+5. Editing entries - Our app allows users to edit entries they have previously added. This feature is useful for users who want to update or revise their journal entries as they learn more about a subject.
+
+6. Logging in with a username and password - Our app allows users to login to the website using the username and password they used for registration. This feature is useful for users who want to access their journal from multiple devices or locations.
+
+7. Creating an account - Our app allows users to create an account to access the journaling features. This feature is useful for users who want to create a private space to reflect on their thoughts and feelings.
+
 ### Design Features
 
 - Navigation bar will allow user to navigate from page to page easily on all devices.
-
-- Landing Register button
 
 ### Features to Implement
 
