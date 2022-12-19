@@ -47,16 +47,42 @@ We hope you enjoy using the Online Journal app!
 7. I can **create** an account as a **user** of the site.
 
 #### Site Admin:
-1. As a **site Admin** I can **restrict access to Topics page.**
+1. As a **site Admin**, I can **restrict access to Topics page.**
+2. As a **site Admin**, I can **modify the appearance and layout of the app** to make it more user-friendly and visually appealing.
+3. As a **site Admin** , I can **create and manage categories or tags** to help users organize and classify their topics.
+4. As a **site Admin** , I can **enable or disable features or functionality within the app** to customize the experience for users.
 
-
+#### Users
 1. As a user of the Online Journal app, you have the ability to log in the topics you have an interest in. This feature allows you to easily track and revisit the information you are learning about, helping you stay organized and focused on your goals.
 
-To log in a topic, simply navigate to the appropriate section of the app and enter the topic you are interested in. You can then add notes and comments about your progress as you learn more about the topic.
+     To log in a topic, simply navigate to the appropriate section of the app and enter the topic you are interested in. You can then add notes and comments about your progress as you learn more about the topic.
 
-The ability to log in and track your interests is a key feature of the Online Journal app, and it is designed to make it easy for you to stay organized and focused on your goals. Whether you are a student, professional, or lifelong learner, this feature can help you get the most out of your learning experience. So, it will be very helpful for you to use this feature and make the most out of it. 
+     The ability to log in and track your interests is a key feature of the Online Journal app, and it is designed to make it easy for you to stay organized and focused on your goals. Whether you are a student, professional, or lifelong learner, this feature can help you get the most out of your learning experience. So, it will be very helpful for you to use this feature and make the most out of it. 
+2. As a user of the Online Journal app, you have the option to create new entries for subjects that interest you. This feature allows you to easily track your progress and revisit information as you learn.
 
+     To create a new entry, simply navigate to the appropriate section of the app and enter the subject you are interested in.
+3. As a site user of the Online Journal app, you have the ability to view the entirety of a post by clicking on it. This allows you to easily read and review the information you have logged about a particular topic.
 
+     To view a post in its entirety, simply click on the post title or summary. This will open the full post, allowing you to read through all of the details and notes you have entered.
+4. As a site user of the Online Journal app, you have the ability to delete entries that you no longer need or want to track. This feature allows you to keep your journal organized and focused on the topics that are most important to you.
+
+     To delete an entry, simply navigate to the appropriate section of the app and locate the entry you wish to delete. You can then use the delete function to remove the entry from your journal.
+5. As a site user of the Online Journal app, you have the ability to edit the entries you have previously added. This feature allows you to make updates or changes to your journal as your learning progresses.
+
+     To edit an entry, simply navigate to the entry section of the app and locate the entry you wish to edit. You can then use the edit icon to make changes to the entry.
+6. As a site user of the Online Journal app, you have the ability to log in to the website using the username and password you used during registration. This feature allows you to access your personal journal and track your learning progress.
+
+     To log in, simply enter your username and password into the appropriate fields on the login page. Once you have logged in, you will be able to access your journal and use all of the features of the app.
+7. As a user of the Online Journal app, you have the ability to create an account on the site. This allows you to access the features of the app and track your learning progress.
+
+     To create an account, simply navigate to the registration page and enter your desired username, password and your email.
+
+#### Site Admin:
+1. As the site administrator of the Online Journal app, you have the ability to restrict access to the Topics page. This allows you to control which users are able to view and edit the topics in the app.
+
+     To restrict access to the Topics page, you can use the app's built-in user management and permissions system. This system allows you to specify which users are able to access the page and which actions they are able to perform.
+
+     The ability to restrict access to the Topics page is a useful feature for the site administrator, allowing you to control who can view and edit the topics in the app. This can be useful for maintaining the integrity and accuracy of the information in the app, as well as for managing access to sensitive or confidential information. So, it will be very helpful for you to use this feature and make the most out of it.
 ### Design
 
  #### Colour Scheme
