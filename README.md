@@ -1,6 +1,12 @@
 # Online Journal
 
-Online Journal is a functional website to keep track of the topics about the user is reading/learning. It is made as a part of a full stack portfolio project with Code Institute.
+Welcome to the Online Journal app! This is a functional website that allows you to keep track of the topics you are reading and learning about.
+
+This app is built with Django, a powerful web framework for Python. It is part of a full stack portfolio project with Code Institute, designed to showcase your skills as a full stack developer.
+
+With the Online Journal app, you can easily add and track the topics you are learning about, as well as make notes and comments on your progress. Whether you're a student, professional, or lifelong learner, this app is a great tool for staying organized and motivated.
+
+We hope you enjoy using the Online Journal app!
 
 [View the live project here](https://online-journal2022.herokuapp.com/ "Link to deployed site - Online Journal")
 
