@@ -120,7 +120,9 @@ Overall, the colors in this palette are chosen to be non-distracting and calming
 
 #### Typography
 
-The *Sura* font is the main font used throughout the whole website with Sans Serif as the fallback. *Sura* is used because of the roundness and softness of the letters while maintainig the professional look. It's perfect for a casual environment but also not too formal.
+
+The **Sura** font is a geometric sans-serif font designed by Carolina Giovagnoli. It is a modern and clean font with a straightforward, no-nonsense design. The geometric shapes and clean lines of Sura give it a strong, futuristic look that is ideal for technology-focused projects. Sura was used for headings and other spotlight elements to create a clean, modern look.  For the body font I choose **Merriweather**. Merriweather is a serif font that is clean and modern, with a slightly more formal and traditional feel than Sura. I used it to provide a nice contrast to Sura's strong, geometric style.
+
 
 ## Features
 
