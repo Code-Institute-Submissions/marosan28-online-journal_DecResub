@@ -95,11 +95,28 @@ We hope you enjoy using the Online Journal app!
 ### Design
 
  #### Colour Scheme
- 
-- [The colour palette used on this website is:](https://coolors.co/9e5e2a-f5f5dc-000000-ffffff-c4c4c4 'Color Palete')
 
-    - Colors chosen are soft so the user is able to enter and read data with minimal distractions. 
-    - The color scheme is made to be minimalistic.
+ Below is the colour scheme used in this project. 
+ 
+- Lavender Web <span style="color: #dedef3;">&#x25A0;</span>
+- Beige <span style="color: #f5f5dc;">&#x25A0;</span>
+- Black <span style="color: #000000;">&#x25A0;</span>
+- White <span style="color: #ffffff;">&#x25A0;</span>
+- Light Gray <span style="color: #d3d3d3;">&#x25A0;</span>
+
+How the colors have been used in this app:
+
+Lavender Web (#dedef3) - This is a soft, muted shade of purple that was used as a background color for the journaling app. Its calming nature can help users focus and relax while writing.
+
+Beige (#f5f5dc) - This is a light, neutral color that was used for text and other design elements in the journaling app. It is easy on the eyes and helps create a clean, uncluttered look.
+
+Black (#000000) - Black is a classic color that was used for text and other design elements in the journaling app. It is a strong, bold color that can help create contrast and make text stand out.
+
+White (#ffffff) - White is a clean, bright color that was used as the background color for the journaling app. It can help create a sense of openness and clarity, and make text and other elements easy to read.
+
+Light Gray (#d3d3d3) - This is a soft, muted shade of gray that was used for text and other design elements in the journaling app. It is a neutral color that can help create a calming, focused atmosphere.
+
+Overall, the colors in this palette are chosen to be non-distracting and calming, which can help users focus on journaling and writing. They also create a clean, uncluttered look that can help users feel organized and in control.
 
 #### Typography
 
