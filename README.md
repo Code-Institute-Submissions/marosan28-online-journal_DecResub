@@ -183,6 +183,66 @@ The **Sura** font is a geometric sans-serif font designed by Carolina Giovagnoli
 - [PostgreSQL](https://www.postgresql.org/)
 - [Heroku](https://dashboard.heroku.com/login)
 - [Google Fonts](https://fonts.google.com/ "Link to Google Fonts")
+
+# Testing
+
+## Index – Table of Contents
+
+* [Automated Testing](#automated-testing) 
+* [Manual Testing](#manual-testing) 
+* [User Stories Testing](#user-stories-testing)
+* [Responsiveness Testing](#responsiveness-testing)
+* [HTML Testing](#html-testing)
+* [CSS Testing](#css-testing)
+* [JavaScript Testing](#javascript-testing)
+* [Python Testing](#python-testing)
+* [Lighthouse Testing](#lighthouse-testing)
+
+
+## Automated Testing
+Automated unit testing was done within Django.
+
+|  App              | Component     | Test                                                                                   | Test Outcome  |
+|-------------------|---------------|----------------------------------------------------------------------------------------|---------------|
+|  online_journal   | Urls          | Test that the admin URL works and redirects to the correct page                        | PASS          |
+|  online_journal   | Urls          | Test that the users URL works and redirects to the correct page                        | PASS          |
+|  online_journal   | Views         | Test that the home page view works and renders the correct template                    | PASS          |
+|  learning_logs    | Urls          | Test that the home page URL works and redirects to the correct page                    | PASS          |
+|  learning_logs    | Urls          | Test that the all topics URL works and redirects to the correct page                   | PASS          |
+|  learning_logs    | Urls          | Test that the specific topic URL works and redirects to the correct page               | PASS          |
+|  learning_logs    | Urls          | Test that the new entry URL works and redirects to the correct page                    | PASS          |
+|  learning_logs    | Urls          | Test that the edit entry URL works and redirects to the correct page                   | PASS          |
+|  learning_logs    | Urls          | Test that the delete entry URL works and redirects to the correct page                 | PASS          |
+|  learning_logs    | Views         | Test that the home page view works and renders the correct template                    | PASS          |
+|  learning_logs    | Views         | Test that the view for showing all topics works and renders the correct template       | PASS          |
+|  learning_logs    | Views         |Test that the view for showing a specific topic works and renders the correct template  | PASS          |
+|  learning_logs    | Views         |Test that the view for introducing a new topic works and renders the correct template   | PASS          |
+|  learning_logs    | Views         |Test that the view for introducing a new topic works and renders the correct template   | PASS          |
+|  learning_logs    | Views         |Test that the view for adding a new entry works and renders the correct template        | PASS          |
+|  learning_logs    | Views         |Test that the view for editing an entry works and renders the correct template          | PASS          |
+|  learning_logs    | Views         |Test that the view for deleting an entry works and renders the correct template         | PASS          |
+|  learning_logs    | Forms         |Test that the topic form requires the name field                                        | PASS          |
+|  learning_logs    | Forms         |Test that the entry form requires the text field                                        | PASS          |
+|  users            | Urls          |Test that the logout URL works and redirects to the correct page                        | PASS          |
+|  users            | Urls          |Test that the logout view works and redirects to the correct page                       | PASS          |
+|  users            | Views         |Test that the logout view works and redirects to the correct page                       | PASS          |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Credits
 - Python crash course book by Eric Matthes
 - Slack community
