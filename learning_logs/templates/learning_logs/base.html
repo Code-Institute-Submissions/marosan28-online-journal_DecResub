@@ -51,6 +51,7 @@
       <span class="navbar-toggler-icon"></span></button>
    
   </nav>
+  {% if user.is_authenticated %}
   <div class="d-flex justify-content-between">
   <div class="card" style="width: 18rem;">
     <div class="card bg-light">
@@ -78,7 +79,7 @@
     </div>
   </div>
 </div>
-
+{% endif %}
   {% if not user.is_authenticated %}
   {% include 'learning_logs/includes/messages.html' %}
   <main role="main" class="container">
