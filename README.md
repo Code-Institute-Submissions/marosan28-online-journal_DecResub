@@ -227,6 +227,27 @@ Automated unit testing was done within Django.
 |  users            | Urls          |Test that the logout view works and redirects to the correct page                       | PASS          |
 |  users            | Views         |Test that the logout view works and redirects to the correct page                       | PASS          |
 
+## Manual Testing
+
+|  Test Label                                   | Action         | Expected Outcome                                          | Test Outcome  |
+|-----------------------------------------------|----------------|-----------------------------------------------------------|---------------|
+|    Register Jumbotron                         | Page load      |  Visible on homepage                                      | PASS          |
+|    Login button in navigation bar             | Page load      |  Visible on homepage                                      | PASS          |
+|    Login functionality                        | User input     |  Successful login redirects to homepage                   | PASS          |
+|    User greeting in navbar                    | User input     |  Correctly displays "Hello, [username]"	               | PASS          |
+|    Search button                              | User input     |  Opens list of topics when clicked	                    | PASS          |
+|    Topic list                                 | User input     |  Each topic is clickable                                  | PASS          |
+|   "Add New Topic" button                      | User input     |  Redirects to new topic form when clicked                 | PASS          |
+|   New topic form                              | User input     |  Accepts user input and adds new topic to list            | PASS          |
+|   Entry list on specific topic page           | User input     |  Displays list of entries with dates                      | PASS          |
+|   Edit entry button                           | User input     |  Redirects to form for editing entry                      | PASS          |
+|   Delete entry button                         | User input     |  Redirects to "Are you sure?" page and removes entry      | PASS          |
+|   Django messages+Bootstrap alert             | User input     |  Displays alert after making changes                      | PASS          |
+
+
+
+
+
 
 
 
