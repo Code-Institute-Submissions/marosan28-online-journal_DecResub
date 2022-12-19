@@ -83,6 +83,15 @@ We hope you enjoy using the Online Journal app!
      To restrict access to the Topics page, you can use the app's built-in user management and permissions system. This system allows you to specify which users are able to access the page and which actions they are able to perform.
 
      The ability to restrict access to the Topics page is a useful feature for the site administrator, allowing you to control who can view and edit the topics in the app. This can be useful for maintaining the integrity and accuracy of the information in the app, as well as for managing access to sensitive or confidential information. So, it will be very helpful for you to use this feature and make the most out of it.
+2. As the site administrator of the Online Journal app, you have the ability to modify the appearance and layout of the app to make it more user-friendly and visually appealing. This allows you to customize the look and feel of the app to better meet the needs and preferences of your users.
+
+     To modify the appearance and layout of the app, you can use the app's built-in design and customization tools. These tools allow you to change things like the color scheme, font styles, and layout of the app to create a more cohesive and visually appealing experience for users.
+3. As the site administrator of the Online Journal app, you have the ability to create and manage categories or tags to help users organize and classify their topics. This feature allows you to create structured categories or tags that users can use to classify and organize their posts and notes within the app.
+
+     To create and manage categories or tags, you can use the app's built-in categorization and tagging tools. These tools allow you to create new categories or tags, assign them to specific posts or notes, and manage the organization of the app's content.
+4. As the site administrator of the Online Journal app, you have the ability to enable or disable features or functionality within the app to customize the experience for users. This allows you to control which features and functionality are available to users, helping you tailor the app to the needs and preferences of your audience.
+
+     To enable or disable features or functionality within the app, you can use the app's built-in feature management tools. These tools allow you to turn specific features on or off, as well as customize the behavior and functionality of the app.
 ### Design
 
  #### Colour Scheme
