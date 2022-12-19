@@ -46,6 +46,19 @@ def new_topic(request):
     return render(request, 'learning_logs/new_topic.html', context)
 
 @login_required
+def delete_topic(request, topic_id):
+    """Delete a topic."""
+    topic = get_object_or_404(Topic, id=topic_id)
+    if request.method == 'POST':
+        # POST data submitted, delete topic.
+        topic.delete()
+        messages.success(request, "Topic successfully deleted!")
+        return redirect('learning_logs:topics')
+    # Show confirmation form.
+    context = {'topic': topic}
+    return render(request, 'learning_logs/delete_topic.html', context)
+
+@login_required
 def new_entry(request, topic_id):
     """New entry"""
     topic = get_object_or_404(Topic, id=topic_id)
@@ -84,6 +97,7 @@ def edit_entry(request, entry_id):
 
     context = {'entry': entry, 'topic': topic, 'form': form}
     return render(request, 'learning_logs/edit_entry.html', context)
+
 # Delete Entry
 
 @login_required

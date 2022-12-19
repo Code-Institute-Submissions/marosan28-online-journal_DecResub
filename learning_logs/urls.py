@@ -26,4 +26,8 @@ urlpatterns = [
     # Deleting an entry
     path('entry/<int:entry_id>/delete/', views.delete_entry, name='delete_entry'),
 
+    # Deleting a topic
+    path('topics/<int:topic_id>/delete/', views.delete_topic, name='delete_topic'),
+
+
 ]
