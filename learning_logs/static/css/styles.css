@@ -64,7 +64,7 @@ color: black;
 /* Index html */
 
 main.container {
-    padding: 0;
+    padding: 11px;
 }
 
 #jumbotron {
@@ -93,7 +93,7 @@ ul {
 
 }
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
   }

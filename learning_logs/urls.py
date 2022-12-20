@@ -29,6 +29,4 @@ urlpatterns = [
     # Deleting a topic
     path('topics/<int:topic_id>/delete/', views.delete_topic, name='delete_topic'),
 
-    path('newsletter/signup/', views.newsletter_signup, name='newsletter_signup'),
-
 ]
