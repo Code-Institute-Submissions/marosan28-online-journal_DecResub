@@ -119,15 +119,27 @@ def delete_entry(request, entry_id):
 
 @user_is_superuser
 def newsletter(request):
-    return redirect('/')
+    if request.method == 'POST':
+        form = NewsletterForm(request.POST)
+        if form.is_valid():
+            subject = form.cleaned_data.get('subject')
+            receivers = form.cleaned_data.get('receivers').split(',')
+            email_message = form.cleaned_data.get('message')
 
+            mail = EmailMessage(subject, email_message, f"OnlineJournal <{request.user.email}>", bcc=receivers)
+            mail.content_subtype = 'html'
 
+            if mail.send():
+                messages.success(request, "Email sent succesfully")
+            else:
+                messages.error(request, "There was an error sending email")
 
-...
+        else:
+            for error in list(form.errors.values()):
+                messages.error(request, error)
 
-@user_is_superuser
-def newsletter(request):
+        return redirect('/')
+
     form = NewsletterForm()
-    form.fields["receivers"].initial = ','.join([active.email for active in SubscribedUsers.objects.all()])
-
-    return render(request=request, template_name='learning_logs/newsletter.html', context={"form": form})
+    form.fields['receivers'].initial = ','.join([active.email for active in SubscribedUsers.objects.all()])
+    return render(request=request, template_name='learning_logs/newsletter.html', context={'form': form})
