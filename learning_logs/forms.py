@@ -19,8 +19,10 @@ class EntryForm(forms.ModelForm):
         labels = {'text': ''}
         widgets = {'text': forms.Textarea(attrs={'cols': 40})}
 
+
 class NewsletterForm(forms.Form):
     subject = forms.CharField()
     receivers = forms.CharField()
     message = forms.CharField(widget=TinyMCE(), label="Email content")
+
 

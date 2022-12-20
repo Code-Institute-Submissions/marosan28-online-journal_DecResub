@@ -105,6 +105,7 @@ p#topic-name{
 }
 p.search-p {
     padding: 10px;
+    text-align: center;
 }
 /* Media queries */
 
