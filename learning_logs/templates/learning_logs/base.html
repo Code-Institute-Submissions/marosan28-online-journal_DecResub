@@ -14,7 +14,6 @@
   {% endblock %}
   <link rel="stylesheet" href='{% static "css/styles.css" %}' type="text/css" />
   <title>Online Journal</title>
-
 </head>
 
 <body>
@@ -51,35 +50,7 @@
       <span class="navbar-toggler-icon"></span></button>
    
   </nav>
-  {% if user.is_authenticated %}
-  <div class="d-flex justify-content-between">
-  <div class="card" style="width: 18rem;">
-    <div class="card bg-light">
-      <h5 class="card-title">Welcome :) </h5>
 
-      <p class="card-text">Welcome to the Online Journal app! We're so glad you're here. 
-        This app is a great tool for staying organized and motivated as you learn and grow. 
-        With the Online Journal app, you can easily track the topics you're reading and learning about, 
-        as well as make notes and comments on your progress. Whether you're a student, professional, or lifelong learner, 
-        we hope you find the app useful and enjoyable. Thank you for choosing the Online Journal app, and we hope you 
-        have a great experience using it.</p>
-    </div>
-  </div>
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">Why you should take notes</h5>
-      <p class="card-text">Organizing your thoughts and understanding the material better 
-     Studies have shown that taking notes can help you remember the information 
-        you've learned for longer periods of time.
-        Having notes to refer back to can be helpful when you 
-        need to review the material at a later date.
-        Encouraging active learning: Taking notes requires you to be actively engaged with the 
-        material, rather than just passively listening or reading. This active learning can help you 
-        better understand and retain the information.</p>
-    </div>
-  </div>
-</div>
-{% endif %}
   {% if not user.is_authenticated %}
   {% include 'learning_logs/includes/messages.html' %}
   <main role="main" class="container">
@@ -98,3 +69,4 @@
 </body>
 
 </html>
+

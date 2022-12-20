@@ -1,21 +1,23 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.shortcuts import render
 
 from .models import Topic, Entry
 from .forms import TopicForm, EntryForm
+
 
 
 def index(request):
     """The home page"""
     return render(request, 'learning_logs/index.html')
 
-
 @login_required
 def topics(request):
     """Show all topics."""
     topics = Topic.objects.order_by('date_added')
     context = {'topics': topics}
+    print(render(request, 'learning_logs/topics.html', context).content)
     return render(request, 'learning_logs/topics.html', context)
 
 
