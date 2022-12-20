@@ -92,6 +92,7 @@ ul {
     padding: 5%;
 
 }
+
 /* Media queries */
 
 
@@ -107,6 +108,9 @@ ul {
 }
 .bookmark {
     font-size: .8rem;
+}
+img.logo-img  {
+    width: 78%  
 }
 
 /* Index Html */
