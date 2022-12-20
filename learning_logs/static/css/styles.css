@@ -58,8 +58,8 @@ color: black;
 .topic-edit {
     font-size: xx-large;
 }
-.btn-secondary {
-    float: left;
+.btn-secondary.go-back {
+    float: left!important;
 }
 /* Index html */
 
@@ -92,7 +92,7 @@ ul {
     padding: 5%;
 
 }
-footer {
+footer.bg-light {
     position: relative;
     bottom: 0;
     width: 100%;

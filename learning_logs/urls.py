@@ -32,4 +32,8 @@ urlpatterns = [
     # Newsletter
     path("newsletter", views.newsletter, name="newsletter"),
 
+    path('disclaimer/', views.disclaimer, name='disclaimer'),
+
+    path('tandc/', views.tandc, name='tandc'),
+
 ]

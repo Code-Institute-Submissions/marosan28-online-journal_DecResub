@@ -30,12 +30,10 @@
         {% endif %}
         <div class="row mobiledevice">
             <div class="col-lg-4 col-md-4 col-sm-4 text-left">
-                <a href="/">
-                    <h4>Disclaimer</h4>
-                </a>
+                <a href="{% url 'learning_logs:disclaimer' %}">Disclaimer</a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 text-left">
-                <h4>Information</h4>
+                <a href="{% url 'learning_logs:tandc' %}">Terms and Conditions</a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 text-left">
                 <a href="/">

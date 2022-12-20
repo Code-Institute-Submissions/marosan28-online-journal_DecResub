@@ -143,3 +143,12 @@ def newsletter(request):
     form = NewsletterForm()
     form.fields['receivers'].initial = ','.join([active.email for active in SubscribedUsers.objects.all()])
     return render(request=request, template_name='learning_logs/newsletter.html', context={'form': form})
+
+
+# Disclaimer
+def disclaimer(request):
+    return render(request, 'learning_logs/disclaimer.html')
+
+    
+def tandc(request):
+    return render(request, 'learning_logs/tandc.html')
