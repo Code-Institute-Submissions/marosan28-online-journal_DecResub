@@ -100,6 +100,9 @@ footer.bg-light {
 p {
     margin-bottom: 18rem;
 }
+p#topic-name{
+    margin-bottom: 3rem;
+}
 p.search-p {
     padding: 10px;
 }
