@@ -61,10 +61,10 @@
     <div>
       {% block content %}
       {% if user.is_authenticated %}
-      <div class="d-flex justify-content-between">
-        <div class="card" style="width: 18rem;">
-          <div class="card bg-light">
-            <h5 class="card-title">Welcome :) </h5>
+      <div class="d-flex flex-wrap-nowrap">
+        <div class="card" style="width: 50rem;">
+          <div class="card-body bg-light">
+            <h5 class="card-title">Welcome!! </h5>
       
             <p class="card-text">Welcome to the Online Journal app! We're so glad you're here. 
               This app is a great tool for staying organized and motivated as you learn and grow. 
@@ -74,9 +74,9 @@
               have a great experience using it.</p>
           </div>
         </div>
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 50rem;">
           <div class="card-body">
-            <h5 class="card-title">Why you should take notes</h5>
+            <h5 class="card-title">Taking notes, why?</h5>
             <p class="card-text">Organizing your thoughts and understanding the material better 
            Studies have shown that taking notes can help you remember the information 
               you've learned for longer periods of time.
@@ -88,6 +88,7 @@
           </div>
         </div>
       </div>
+      
       {% endif %}
        {% endblock content%}
     </div>
