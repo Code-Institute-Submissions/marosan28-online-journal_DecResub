@@ -76,11 +76,18 @@ def new_entry(request, topic_id):
         if form.is_valid():
             new_entry = form.save(commit=False)
             new_entry.topic = topic
-            new_entry.save()
-            messages.success(request, "New entry added successfully!")
-            return redirect('learning_logs:topic', topic_id=topic_id)
+
+            # Add maximum length restriction
+            if len(new_entry.text) > 1000:
+                form.add_error('text', 'Entry content is too long (maximum 500 characters)')
+            else:
+                new_entry.save()
+                messages.success(request, "New entry added successfully!")
+                return redirect('learning_logs:topic', topic_id=topic_id)
+
     context = {'topic': topic, 'form': form}
     return render(request, 'learning_logs/new_entry.html', context)
+
 
 
 @login_required
@@ -149,6 +156,6 @@ def newsletter(request):
 def disclaimer(request):
     return render(request, 'learning_logs/disclaimer.html')
 
-    
+
 def tandc(request):
     return render(request, 'learning_logs/tandc.html')
