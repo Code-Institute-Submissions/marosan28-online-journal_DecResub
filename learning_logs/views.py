@@ -5,6 +5,7 @@ from django.shortcuts import render
 
 from .models import Topic, Entry, EmailAddress
 from .forms import TopicForm, EntryForm
+from .decorators import user_is_superuser
 
 
 def index(request):
@@ -112,5 +113,9 @@ def delete_entry(request, entry_id):
     context = {'entry': entry, 'topic': topic}
     return render(request, 'learning_logs/delete_entry.html', context)
 
+
+@user_is_superuser
+def newsletter(request):
+    return redirect('/')
 
 
