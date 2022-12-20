@@ -97,7 +97,12 @@ footer.bg-light {
     bottom: 0;
     width: 100%;
   }
-  
+p {
+    margin-bottom: 18rem;
+}
+p.search-p {
+    padding: 10px;
+}
 /* Media queries */
 
 
