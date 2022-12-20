@@ -16,3 +16,7 @@ class EntryForm(forms.ModelForm):
         fields = ['text']
         labels = {'text': ''}
         widgets = {'text': forms.Textarea(attrs={'cols': 40})}
+
+        
+class NewsletterSignupForm(forms.Form):
+    email = forms.EmailField()

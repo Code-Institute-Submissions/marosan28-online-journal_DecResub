@@ -1,22 +1,31 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.shortcuts import render
 
-from .models import Topic, Entry
-from .forms import TopicForm, EntryForm
-
+from .models import Topic, Entry, EmailAddress
+from .forms import TopicForm, EntryForm, NewsletterSignupForm
 
 
 def index(request):
     """The home page"""
     return render(request, 'learning_logs/index.html')
 
-# Subscribe to Newsletter
 
-def form_submit(request):
-    # Process form data and perform necessary actions
-    return render(request, 'learning_logs/index.html')
+def newsletter_signup(request):
+    if request.method == 'POST':
+        form = NewsletterSignupForm(request.POST)
+        if form.is_valid():
+            # Save the email address to the database
+            EmailAddress.objects.create(email=form.cleaned_data['email'])
+            # Add a success message
+            messages.success(request, "Thank you for signing up for our newsletter!")
+            # redirect to a new URL
+            return HttpResponseRedirect('learning_logs/newsletter_signup_success.html')
+    else:
+        form = NewsletterSignupForm()
+
+    return render(request, 'learning_logs/newsletter_signup.html', {'form': form})
 
 @login_required
 def topics(request):

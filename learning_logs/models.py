@@ -19,3 +19,8 @@ class Entry(models.Model):
 
     def __str__(self):
         return self.text[:50]
+
+        
+class EmailAddress(models.Model):
+    email = models.EmailField(unique=True)
+    created_at = models.DateTimeField(auto_now_add=True)
