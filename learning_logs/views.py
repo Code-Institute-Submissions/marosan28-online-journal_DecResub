@@ -6,6 +6,9 @@ from django.shortcuts import render
 from .models import Topic, Entry, EmailAddress
 from .forms import TopicForm, EntryForm
 from .decorators import user_is_superuser
+from django.core.mail import EmailMessage
+from .forms import NewsletterForm
+from users.models import SubscribedUsers
 
 
 def index(request):
@@ -119,3 +122,12 @@ def newsletter(request):
     return redirect('/')
 
 
+
+...
+
+@user_is_superuser
+def newsletter(request):
+    form = NewsletterForm()
+    form.fields["receivers"].initial = ','.join([active.email for active in SubscribedUsers.objects.all()])
+
+    return render(request=request, template_name='learning_logs/newsletter.html', context={"form": form})

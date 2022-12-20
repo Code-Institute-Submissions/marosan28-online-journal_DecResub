@@ -54,6 +54,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'bootstrap4',
+    'tinymce',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
