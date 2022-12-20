@@ -17,7 +17,6 @@ def topics(request):
     """Show all topics."""
     topics = Topic.objects.order_by('date_added')
     context = {'topics': topics}
-    print(render(request, 'learning_logs/topics.html', context).content)
     return render(request, 'learning_logs/topics.html', context)
 
 
