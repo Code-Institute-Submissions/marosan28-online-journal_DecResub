@@ -12,6 +12,12 @@ def index(request):
     """The home page"""
     return render(request, 'learning_logs/index.html')
 
+# Subscribe to Newsletter
+
+def form_submit(request):
+    # Process form data and perform necessary actions
+    return render(request, 'learning_logs/index.html')
+
 @login_required
 def topics(request):
     """Show all topics."""
@@ -112,3 +118,6 @@ def delete_entry(request, entry_id):
         return redirect('learning_logs:topic', topic_id=topic.id)
     context = {'entry': entry, 'topic': topic}
     return render(request, 'learning_logs/delete_entry.html', context)
+
+
+

@@ -1,0 +1,8 @@
+<form action="{% url 'learning_logs:form_submit' %}" method="post">
+    {% csrf_token %}
+    <div class="form-outline mb-4">
+        <input type="email" id="form5Example27" class="form-control" name="email" />
+        <label class="form-label" for="form5Example27">Email address</label>
+    </div>
+    <button type="submit" class="btn btn-primary mb-4">Subscribe</button>
+</form>
