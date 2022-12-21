@@ -37,20 +37,9 @@
         {% endif %}
       </ul>
       <ul class="navbar-nav">
-        {% block extra_js %}
         <li class="nav-item">
-            {% if show_search_form %}
-            <form id="search-form" method="get" action="{% url 'learning_logs:search' %}">
-              <input type="text" name="query">
-                <button type="submit">Search</button>
-            </form>
-            {% endif %}
-           
           <a class="nav-link" href="{% url 'learning_logs:topics'%}">
-            Explore Topics
-          </a>
-        </li>
-        {% endblock %}
+            Explore Topics</a></li>
       </ul>
     </div>
     <a class="navbar-brand mx-auto" href="{% url 'learning_logs:index'%}">
@@ -99,7 +88,7 @@
           </div>
         </div>
       </div>
-      <p class="search-p">Click on Search Icon at the top left to start your Journaling Journey!</p>
+      <p class="search-p">Click Explore Topics at the top left to start your Journaling Journey!</p>
       {% endif %}
        {% endblock content%}
     </div>

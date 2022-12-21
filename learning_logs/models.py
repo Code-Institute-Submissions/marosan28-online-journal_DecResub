@@ -24,7 +24,3 @@ class Entry(models.Model):
 class EmailAddress(models.Model):
     email = models.EmailField(unique=True)
     created_at = models.DateTimeField(auto_now_add=True)
-
-
-class TopicSearch(models.Model):
-    name = models.CharField(max_length=500)

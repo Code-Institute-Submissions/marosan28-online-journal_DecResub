@@ -21,10 +21,4 @@
 <h2><button class="btn btn-secondary" type="button" onclick="window.location.href='{% url 'learning_logs:new_topic' %}'">Add another topic at hand</button>
 </h2>
 {% endblock content %}
-{% block extra_js %}
-    {% include 'learning_logs/extra_js.html' %}
-    <script>
-        var show_search_form = true;
-    </script>
-{% endblock extra_js %}
 
