@@ -45,6 +45,8 @@ We hope you enjoy using the Online Journal app!
 5. As a **site user** I can **edit the entries I've previously added.**
 6. As a **site user** I can **login to the website with the username and password I used for registration.** 
 7. I can **create** an account as a **user** of the site.
+8. As a **site user** I can **sign up for the newsletter**
+
 
 #### Site Admin:
 1. As a **site Admin**, I can **restrict access to Topics page.**
@@ -76,6 +78,8 @@ We hope you enjoy using the Online Journal app!
 7. As a user of the Online Journal app, you have the ability to create an account on the site. This allows you to access the features of the app and track your learning progress.
 
      To create an account, simply navigate to the registration page and enter your desired username, password and your email.
+
+8. To sign up for the newsletter, users can visit the website and scroll to the bottom of the page to find the newsletter sign-up form in the footer. Users can enter their name and email address and click the "Sign up" button to submit their sign-up request. They will see a message confirming that they have successfully signed up for the newsletter. This feature allows users to stay informed about updates and new features on the Online Journal app, and helps the app team to connect with their users and gather feedback.
 
 #### Site Admin:
 1. As the site administrator of the Online Journal app, you have the ability to restrict access to the Topics page. This allows you to control which users are able to view and edit the topics in the app.
