@@ -66,5 +66,5 @@ def subscribe(request):
         subscribe_model_instance.name = name
         subscribe_model_instance.email = email
         subscribe_model_instance.save()
-        messages.success(request, f'{email} email was successfully subscribed to our newsletter!')
+        messages.success(request, "Thank you for subscribing! " + f'{email}, You have successfully subscribed to our newsletter!')
         return redirect(request.META.get("HTTP_REFERER", "/"))
