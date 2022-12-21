@@ -55,9 +55,7 @@ color: black;
     color: black;
     text-align: center;
 }
-.topic-edit {
-    font-size: xx-large;
-}
+
 .btn-secondary.go-back {
     float: left!important;
 }
@@ -98,7 +96,9 @@ a.btn.btn-danger {
  /* ----------Footer---------- */
 p#topic-name{
     margin-bottom: 3rem;
+    text-align: center;
 }
+
 p.search-p {
     padding: 10px;
     text-align: center;
