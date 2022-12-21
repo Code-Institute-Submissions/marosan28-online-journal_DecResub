@@ -36,4 +36,6 @@ urlpatterns = [
 
     path('tandc/', views.tandc, name='tandc'),
 
+    path('search/', views.search, name='search'),
+
 ]

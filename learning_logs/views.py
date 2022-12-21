@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.shortcuts import render
 
-from .models import Topic, Entry, EmailAddress
+from .models import Topic, Entry, EmailAddress, TopicSearch
 from .forms import TopicForm, EntryForm
 from .decorators import user_is_superuser
 from django.core.mail import EmailMessage
@@ -19,7 +19,8 @@ def index(request):
 def topics(request):
     """Show all topics."""
     topics = Topic.objects.order_by('date_added')
-    context = {'topics': topics}
+    context = {'topics': topics
+            }
     return render(request, 'learning_logs/topics.html', context)
 
 
@@ -124,6 +125,9 @@ def delete_entry(request, entry_id):
     return render(request, 'learning_logs/delete_entry.html', context)
 
 
+# Newsletter
+
+
 @user_is_superuser
 def newsletter(request):
     if request.method == 'POST':
@@ -153,9 +157,20 @@ def newsletter(request):
 
 
 # Disclaimer
+
+
 def disclaimer(request):
     return render(request, 'learning_logs/disclaimer.html')
+
+# Terms and Conditions 
 
 
 def tandc(request):
     return render(request, 'learning_logs/tandc.html')
+
+# Search 
+
+def search(request):
+    query = request.GET.get('query')
+    results = TopicSearch.objects.filter(name__contains=query)
+    return render(request, 'learning_logs/search_results.html', {'results': results})
