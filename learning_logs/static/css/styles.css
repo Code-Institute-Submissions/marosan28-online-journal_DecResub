@@ -65,6 +65,7 @@ color: black;
 
 main.container {
     padding: 11px;
+    margin-bottom: 18rem;
 }
 
 #jumbotron {
@@ -91,15 +92,10 @@ ul {
 .card.bg-light {
     padding: 5%;
 
+   
 }
-footer.bg-light {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
-p {
-    margin-bottom: 18rem;
-}
+
+ /* ----------Footer---------- */
 p#topic-name{
     margin-bottom: 3rem;
 }
@@ -107,6 +103,15 @@ p.search-p {
     padding: 10px;
     text-align: center;
 }
+footer.bg-light {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+
 /* Media queries */
 
 
@@ -128,6 +133,7 @@ img.logo-img  {
 }
 p {
     font-size: small;
+    margin-bottom: 10rem;
 }
 
 /* Index Html */
@@ -159,4 +165,15 @@ p {
     .register {
         font-size: medium;
     }
+}
+
+/* Big screens */
+@media (min-width: 1430px){ 
+footer.bg-light {
+    position: sticky;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+  }
 }

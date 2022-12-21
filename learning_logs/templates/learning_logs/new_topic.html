@@ -1,6 +1,7 @@
 {% extends "learning_logs/base.html" %}
+
 {% block content %}
- <p>Add another topic at hand:</p>
+ <h3>Add another topic at hand:</h3>
 
  <form action="{% url 'learning_logs:new_topic' %}" method="post">
     {% csrf_token %}
