@@ -91,10 +91,10 @@ ul {
   }
 .card.bg-light {
     padding: 5%;
-
-   
 }
-
+a.btn.btn-danger {
+    color: white;
+}
  /* ----------Footer---------- */
 p#topic-name{
     margin-bottom: 3rem;
