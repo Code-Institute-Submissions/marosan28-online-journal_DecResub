@@ -12,6 +12,7 @@
 <form action="{% url 'learning_logs:delete_entry' entry.id %}" method="post">
   {% csrf_token %}
   <input type="submit" value="Delete entry">
+  <input type="button" value="No, go back" onclick="history.back()">
 </form>
 
 {% if messages %}

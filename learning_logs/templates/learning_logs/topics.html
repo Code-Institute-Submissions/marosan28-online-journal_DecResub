@@ -11,12 +11,9 @@
     <li class="list-group-item d-flex justify-content-between">
         <a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a>
         {% if user.is_authenticated %}
-        <form action="{% url 'learning_logs:delete_topic' topic.id %}" method="post">
-            {% csrf_token %}
-            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-        </form>
+        <a href="{% url 'learning_logs:delete_topic' topic.id %}" class="btn btn-danger btn-sm">Delete</a>
         {% endif %}
-    </li>
+    </li>    
     {% empty %}
     <li class="list-group-item">There are no entries yet.</li>
 {% endfor %}

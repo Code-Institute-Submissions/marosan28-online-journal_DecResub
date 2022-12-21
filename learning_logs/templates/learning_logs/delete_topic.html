@@ -2,7 +2,7 @@
 {% block content %}
     <h1>Delete Topic</h1>
     <p>Are you sure you want to delete the topic "{{ topic }}"?</p>
-    <form method="post">
+    <form action="{% url 'learning_logs:delete_topic' topic.id %}" method="post">
         {% csrf_token %}
         <input type="submit" value="Delete">
     </form>
