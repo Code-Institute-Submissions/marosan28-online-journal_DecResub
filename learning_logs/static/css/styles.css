@@ -93,6 +93,10 @@ ul {
 a.btn.btn-danger {
     color: white;
 }
+h3.new-entry {
+text-align: center;
+color: black;
+}
  /* ----------Footer---------- */
 p#topic-name{
     margin-bottom: 3rem;

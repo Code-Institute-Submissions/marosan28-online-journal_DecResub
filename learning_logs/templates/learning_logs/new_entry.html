@@ -1,11 +1,15 @@
 {% extends "learning_logs/base.html" %}
 {% load bootstrap4 %}
 {% block content %}
-  <h3>Add a new entry:</h3>
+<a class="btn btn-secondary go-back" href="javascript:history.back()">Go back</a> <br>
+  <h3 class="new-entry">Add a new entry:</h3>
   <form action="{% url 'learning_logs:new_entry' topic.id %}" method='post'>
     {% csrf_token %}
     {% bootstrap_form form %}
     <button name='submit' class="btn btn-secondary new_entry">Add entry</button>
   </form>
-    
+  <ul>
+    <li>Your entry cannot exceed 1000 characters.</li>
+  </ul>
+
 {% endblock content %}
