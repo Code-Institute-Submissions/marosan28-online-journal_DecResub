@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect, get_object_or_404, HttpResponseRe
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.shortcuts import render
-
+import re
+from django import forms
 from .models import Topic, Entry, EmailAddress
 from .forms import TopicForm, EntryForm
 from .decorators import user_is_superuser
@@ -33,6 +34,24 @@ def topic(request, topic_id):
     context = {'topic': topic, 'entries': entries}
     return render(request, 'learning_logs/topic.html', context)
 
+
+
+def validate_non_numeric(value):
+    if value.isnumeric():
+        raise forms.ValidationError("Topic cannot be numerical only.")
+
+def validate_special_characters(value):
+    if re.search(r'[^a-zA-Z0-9]', value):
+        raise forms.ValidationError("Special characters are not allowed.")
+
+class TopicForm(forms.ModelForm):
+    class Meta:
+        model = Topic
+        fields = ['topic_text']
+        widgets = {
+            'topic_text': forms.TextInput(attrs={'class': 'form-control'}),
+        }
+    topic_text = forms.CharField(max_length=250, validators=[validate_non_numeric, validate_special_characters])
 
 @login_required
 def new_topic(request):
@@ -81,7 +100,7 @@ def new_entry(request, topic_id):
 
             # Add maximum length restriction
             if len(new_entry.text) > 1000:
-                form.add_error('text', 'Entry content is too long (maximum 500 characters)')
+                form.add_error('text', 'Entry content is too long (maximum 1000 characters)')
             else:
                 new_entry.save()
                 messages.success(request, "New entry added successfully!")
