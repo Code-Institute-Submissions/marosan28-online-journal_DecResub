@@ -94,6 +94,7 @@ def new_entry(request, topic_id):
 
     class EntryForm(forms.Form):
         text = forms.CharField(
+        label = '',
         min_length=50,
         validators=[validate_non_alphabetic],
         widget=forms.Textarea(attrs={'rows': 5, 'cols': 80})
