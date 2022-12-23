@@ -4,8 +4,8 @@ from django.contrib import messages
 from django.shortcuts import render
 import re
 from django import forms
-from .models import Topic, Entry, EmailAddress
-from .forms import TopicForm, EntryForm
+from .models import Topic, Entry, EmailAddress, EntryModelForm, TopicsForm
+from .forms import TopicForm
 from .decorators import user_is_superuser
 from django.core.mail import EmailMessage
 from .forms import NewsletterForm
@@ -35,37 +35,19 @@ def topic(request, topic_id):
     return render(request, 'learning_logs/topic.html', context)
 
 
-
-def validate_non_numeric(value):
-    if value.isnumeric():
-        raise forms.ValidationError("Topic cannot be numerical only.")
-
-def validate_special_characters(value):
-    if re.search(r'[^a-zA-Z0-9]', value):
-        raise forms.ValidationError("Special characters are not allowed.")
-
-class TopicForm(forms.ModelForm):
-    class Meta:
-        model = Topic
-        fields = ['topic_name']
-        widgets = {
-            'topic_name': forms.TextInput(attrs={'class': 'form-control'}),
-        }
-    topic_name = forms.CharField(max_length=250, validators=[validate_non_numeric, validate_special_characters],label ='')
-
 @login_required
 def new_topic(request):
     """Introduce a new topic."""
     if request.method == 'POST':
         # POST data entered, process.
-        form = TopicForm(data=request.POST)
+        form = TopicsForm(data=request.POST)
         if form.is_valid():
             form.save()
             messages.success(request, "Topic successfully added!")
             return redirect('learning_logs:topics')
     else:
         # No data submitted return blank form.
-        form = TopicForm()
+        form = TopicsForm()
     # Show a blank or incomplete form.
     context = {'form': form}
     return render(request, 'learning_logs/new_topic.html', context)
@@ -83,29 +65,18 @@ def delete_topic(request, topic_id):
     context = {'topic': topic}
     return render(request, 'learning_logs/delete_topic.html', context)
 
+
 @login_required
 def new_entry(request, topic_id):
     """New entry"""
     topic = get_object_or_404(Topic, id=topic_id)
 
-    def validate_non_alphabetic(value):
-        if value.isalpha():
-            raise forms.ValidationError("Entry cannot be characters only.")
-
-    class EntryForm(forms.Form):
-        text = forms.CharField(
-        label = '',
-        min_length=50,
-        validators=[validate_non_alphabetic],
-        widget=forms.Textarea(attrs={'rows': 5, 'cols': 80})
-    )
-
     if request.method != 'POST':
         # No data
-        form = EntryForm()
+        form = EntryModelForm()
     else:
         # Data
-        form = EntryForm(data=request.POST)
+        form = EntryModelForm(data=request.POST)
         if form.is_valid():
             new_entry = form.save(commit=False)
             new_entry.topic = topic
@@ -120,7 +91,6 @@ def new_entry(request, topic_id):
 
     context = {'topic': topic, 'form': form}
     return render(request, 'learning_logs/new_entry.html', context)
-
 
 
 

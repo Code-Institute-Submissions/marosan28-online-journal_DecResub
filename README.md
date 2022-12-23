@@ -279,6 +279,9 @@ In progress
 | messages.html  | Fail   |1. Non-space characters found without seeing a doctype first.            |1. Added a DOCTYPE declaration at the beginning of the HTML code       |
 |                |        |2. Element head is missing a required instance of child element title.   |2. Added a title element inside the head                               |
 |                |        |3. Bad value True for attribute aria-hidden on element span.             |3. Change the value of the aria-hidden attribute to "true" (lowercase) |
+| messages.html  | Fail   |1. Non-space characters found without seeing a doctype first.            |1. Added a DOCTYPE declaration at the beginning of the HTML code       |
+|                |        |2. Element head is missing a required instance of child element title.   |2. Added a title element inside the head                               |
+|                |        |3. Bad value True for attribute aria-hidden on element span.             |3. Change the value of the aria-hidden attribute to "true" (lowercase) |
 
 ## CSS Testing
 
