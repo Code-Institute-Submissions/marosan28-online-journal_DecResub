@@ -51,7 +51,7 @@ class TopicForm(forms.ModelForm):
         widgets = {
             'topic_text': forms.TextInput(attrs={'class': 'form-control'}),
         }
-    topic_text = forms.CharField(max_length=250, validators=[validate_non_numeric, validate_special_characters])
+    topic_text = forms.CharField(max_length=250, validators=[validate_non_numeric, validate_special_characters],label ='')
 
 @login_required
 def new_topic(request):
