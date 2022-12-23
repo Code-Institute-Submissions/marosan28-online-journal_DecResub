@@ -47,11 +47,11 @@ def validate_special_characters(value):
 class TopicForm(forms.ModelForm):
     class Meta:
         model = Topic
-        fields = ['topic_text']
+        fields = ['topic_name']
         widgets = {
-            'topic_text': forms.TextInput(attrs={'class': 'form-control'}),
+            'topic_name': forms.TextInput(attrs={'class': 'form-control'}),
         }
-    topic_text = forms.CharField(max_length=250, validators=[validate_non_numeric, validate_special_characters],label ='')
+    topic_name = forms.CharField(max_length=250, validators=[validate_non_numeric, validate_special_characters],label ='')
 
 @login_required
 def new_topic(request):
@@ -88,6 +88,17 @@ def new_entry(request, topic_id):
     """New entry"""
     topic = get_object_or_404(Topic, id=topic_id)
 
+    def validate_non_alphabetic(value):
+        if value.isalpha():
+            raise forms.ValidationError("Entry cannot be characters only.")
+
+    class EntryForm(forms.Form):
+        text = forms.CharField(
+        min_length=50,
+        validators=[validate_non_alphabetic],
+        widget=forms.Textarea(attrs={'rows': 5, 'cols': 80})
+    )
+
     if request.method != 'POST':
         # No data
         form = EntryForm()
@@ -108,6 +119,7 @@ def new_entry(request, topic_id):
 
     context = {'topic': topic, 'form': form}
     return render(request, 'learning_logs/new_entry.html', context)
+
 
 
 

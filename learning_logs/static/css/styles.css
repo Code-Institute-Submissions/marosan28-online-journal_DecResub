@@ -97,6 +97,10 @@ h3.new-entry {
 text-align: center;
 color: black;
 }
+a.go-back{
+    color: white;
+    text-decoration: none;
+}
  /* ----------Footer---------- */
 p#topic-name{
     margin-bottom: 3rem;
