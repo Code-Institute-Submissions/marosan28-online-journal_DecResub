@@ -288,6 +288,18 @@ In progress
 | delete_entry.html| Pass   |                                                                         |
 | new_topic.html   | Fail   |1. Element div not allowed as child of element button in this context.   |1. Remove a element
 | delete_topic.html| Pass   |                                                                         |
+| disclaimer.html  | Pass   |                                                                         |
+| footer.html      | Pass   |                                                                         |
+| new_entry.html   | Pass   |                                                                         |
+| newsletter.html  | Pass   |                                                                         |
+| tandc.html       | Fail   |1. No p element in scope but a p end tag seen.                           |1. Remove p tag
+| logout.html      | Pass   |                                                                         |
+| register.html    | Fail   |1. End tag p implied, but there were open elements.                      |1. Could not fix, the p tag inside django template  |
+|                  |        |2. Unclosed element span.                                                |2. Could not fix, span element inside django template                               |
+|                  |        |3. Stray end tag span.                                                   |3. Related to first issue, p tag included in django template |
+|                  |        |4. No p element in scope but a p end tag seen.                           |4. Could not fix, included in django template as well  |
+
+
 
 
 ## CSS Testing
