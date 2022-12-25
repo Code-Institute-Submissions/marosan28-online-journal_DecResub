@@ -97,9 +97,10 @@ h3.new-entry {
 text-align: center;
 color: black;
 }
-a.go-back{
+.go-back{
     color: white;
     text-decoration: none;
+    text-transform: uppercase;
 }
  /* ----------Footer---------- */
 p#topic-name{
@@ -118,7 +119,10 @@ footer.bg-light {
     bottom: 0;
     width: 100%;
   }
-
+  li.entry-list {
+    list-style-type: none; 
+  }
+  
 
 /* Media queries */
 

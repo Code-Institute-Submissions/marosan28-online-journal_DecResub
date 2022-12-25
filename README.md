@@ -274,14 +274,21 @@ In progress
 ## HTML Testing
 
 
-| HTML document  | Result | Issues found                                                            | Fixes made                                                            |
-|----------------|--------|-------------------------------------------------------------------------|-----------------------------------------------------------------------|
-| messages.html  | Fail   |1. Non-space characters found without seeing a doctype first.            |1. Added a DOCTYPE declaration at the beginning of the HTML code       |
-|                |        |2. Element head is missing a required instance of child element title.   |2. Added a title element inside the head                               |
-|                |        |3. Bad value True for attribute aria-hidden on element span.             |3. Change the value of the aria-hidden attribute to "true" (lowercase) |
-| messages.html  | Fail   |1. Non-space characters found without seeing a doctype first.            |1. Added a DOCTYPE declaration at the beginning of the HTML code       |
-|                |        |2. Element head is missing a required instance of child element title.   |2. Added a title element inside the head                               |
-|                |        |3. Bad value True for attribute aria-hidden on element span.             |3. Change the value of the aria-hidden attribute to "true" (lowercase) |
+| HTML document    | Result | Issues found                                                            | Fixes made                                                            |
+|----------------  |--------|-------------------------------------------------------------------------|-----------------------------------------------------------------------|
+| messages.html    | Fail   |1. Non-space characters found without seeing a doctype first.            |1. Added a DOCTYPE declaration at the beginning of the HTML code       |
+|                  |        |2. Element head is missing a required instance of child element title.   |2. Added a title element inside the head                               |
+|                  |        |3. Bad value True for attribute aria-hidden on element span.             |3. Change the value of the aria-hidden attribute to "true" (lowercase) |
+| index.html       | Pass   |                                                                         |                             
+| login.html       | "Info" |1. Trailing slash on void elements has no effect                         |1. Delete trailing slash
+| base.html        | Pass   |                                                                         |
+| topics.html      | Pass   |                                                                         |
+| topic.html       | Fail   |1. Element div not allowed as child of element ul in this context.       |1. Wrap div element in li element
+| edit_entry.html  | Pass   |                                                                         |
+| delete_entry.html| Pass   |                                                                         |
+| new_topic.html   | Fail   |1. Element div not allowed as child of element button in this context.   |1. Remove a element
+| delete_topic.html| Pass   |                                                                         |
+
 
 ## CSS Testing
 
