@@ -202,7 +202,6 @@ The **Sura** font is a geometric sans-serif font designed by Carolina Giovagnoli
 * [Responsiveness Testing](#responsiveness-testing)
 * [HTML Testing](#html-testing)
 * [CSS Testing](#css-testing)
-* [JavaScript Testing](#javascript-testing)
 * [Python Testing](#python-testing)
 * [Lighthouse Testing](#lighthouse-testing)
 
