@@ -8,6 +8,7 @@ class Topic(models.Model):
     text = models.CharField(max_length=200)
     date_added = models.DateTimeField(auto_now_add=True)
 
+
     def __str__(self):
         """Return a string representation of a model"""
         return self.text
@@ -63,5 +64,4 @@ class TopicsForm(forms.ModelForm):
         widgets = {
             'topic_name': forms.TextInput(attrs={'class': 'form-control'}),
         }
-    topic_name = forms.CharField(max_length=250, validators=[validate_non_numeric, validate_special_characters], label='Topic name')
-
+    topic_name = forms.CharField(max_length=250, validators=[validate_non_numeric, validate_special_characters],label ='')
