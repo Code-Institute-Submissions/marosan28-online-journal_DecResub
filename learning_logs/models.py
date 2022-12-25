@@ -1,5 +1,6 @@
 from django.db import models
 from django import forms
+import re
 
 
 class Topic(models.Model):
@@ -11,6 +12,7 @@ class Topic(models.Model):
         """Return a string representation of a model"""
         return self.text
 
+
 class Entry(models.Model):
     """Learning log entries for a topic."""
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
@@ -21,7 +23,22 @@ class Entry(models.Model):
         return self.text[:50]
 
 
+def non_numeric(value):
+    if not any(char.isdigit() for char in value):
+        raise forms.ValidationError("Your entry needs to contain at least one numerical character.")
+
+def validate_length(value):
+    if len(value) < 50:
+        raise forms.ValidationError("Your entry cannot be less than 50 characters.")
+    if len(value) > 1000:
+        raise forms.ValidationError("Your entry cannot exceed 1000 characters.")
+
 class EntryModelForm(forms.ModelForm):
+    text = forms.CharField(
+        widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 4}),
+        validators=[non_numeric, validate_length]
+    )
+
     class Meta:
         model = Entry
         fields = ['text']
@@ -31,6 +48,14 @@ class EmailAddress(models.Model):
     email = models.EmailField(unique=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
+def validate_non_numeric(value):
+    if value.isnumeric():
+        raise forms.ValidationError("Topic cannot be numerical only.")
+
+def validate_special_characters(value):
+    if re.search(r'[^a-zA-Z0-9]', value):
+        raise forms.ValidationError("Special characters are not allowed.")
+
 class TopicsForm(forms.ModelForm):
     class Meta:
         model = Topic
@@ -38,8 +63,5 @@ class TopicsForm(forms.ModelForm):
         widgets = {
             'topic_name': forms.TextInput(attrs={'class': 'form-control'}),
         }
-    topic_name = forms.CharField(max_length=250, validators=[validate_non_numeric, validate_special_characters],label ='')
-
-
-
+    topic_name = forms.CharField(max_length=250, validators=[validate_non_numeric, validate_special_characters], label='Topic name')
 

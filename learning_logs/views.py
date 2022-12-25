@@ -5,11 +5,12 @@ from django.shortcuts import render
 import re
 from django import forms
 from .models import Topic, Entry, EmailAddress, EntryModelForm, TopicsForm
-from .forms import TopicForm
 from .decorators import user_is_superuser
 from django.core.mail import EmailMessage
 from .forms import NewsletterForm
 from users.models import SubscribedUsers
+from .models import validate_non_numeric, validate_special_characters, validate_length, non_numeric
+
 
 
 def index(request):
@@ -78,40 +79,39 @@ def new_entry(request, topic_id):
         # Data
         form = EntryModelForm(data=request.POST)
         if form.is_valid():
+            # Validate the text field
+            text = form.cleaned_data['text']
+            non_numeric(text)
+            validate_length(text)
+
             new_entry = form.save(commit=False)
             new_entry.topic = topic
-
-            # Add maximum length restriction
-            if len(new_entry.text) > 1000:
-                form.add_error('text', 'Entry content is too long (maximum 1000 characters)')
-            else:
-                new_entry.save()
-                messages.success(request, "New entry added successfully!")
-                return redirect('learning_logs:topic', topic_id=topic_id)
+            new_entry.save()
+            messages.success(request, "New entry added successfully!")
+            return redirect('learning_logs:topic', topic_id=topic_id)
 
     context = {'topic': topic, 'form': form}
     return render(request, 'learning_logs/new_entry.html', context)
 
 
-
 @login_required
 def edit_entry(request, entry_id):
-    """Manipulate existing entry."""
     entry = get_object_or_404(Entry, id=entry_id)
     topic = entry.topic
+
     if request.method != 'POST':
         # Initial request
-        form = EntryForm(instance=entry)
+        form = EntryModelForm(instance=entry)
     else:
         # POST data submitted
-        form = EntryForm(instance=entry, data=request.POST)
+        form = EntryModelForm(instance=entry, data=request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, "Entry successfully edited!")
             return redirect('learning_logs:topic', topic_id=topic.id)
 
     context = {'entry': entry, 'topic': topic, 'form': form}
     return render(request, 'learning_logs/edit_entry.html', context)
+
 
 # Delete Entry
 
