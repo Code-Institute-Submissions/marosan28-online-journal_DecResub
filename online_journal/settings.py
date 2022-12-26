@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
+import dj_database_url
 from django.contrib.messages import constants as messages
 import mimetypes
 
@@ -95,17 +96,20 @@ WSGI_APPLICATION = 'online_journal.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-     'default': {
-         'ENGINE': 'django.db.backends.sqlite3',
-         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-     }
- }
-
-
 # DATABASES = {
-#   'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
 # }
+
+
+
+DATABASES = {
+   'default': dj_database_url.parse('postgres://gkgcqxem:arAKWWMpnkXPyL5tgYscC8ozEqa9QypS@lucky.db.elephantsql.com/gkgcqxem')
+}
+
+
 
 ALLOWED_HOSTS = []
 
