@@ -33,7 +33,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'kingolina??25'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'kingolina??25')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
@@ -103,15 +103,12 @@ WSGI_APPLICATION = 'online_journal.wsgi.application'
 #     }
 # }
 
-
-
 DATABASES = {
-   'default': dj_database_url.parse('postgres://gkgcqxem:arAKWWMpnkXPyL5tgYscC8ozEqa9QypS@lucky.db.elephantsql.com/gkgcqxem')
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
 
 
-
-ALLOWED_HOSTS = ["online-journal2022.herokuapp.com"]
+ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
