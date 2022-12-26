@@ -8,6 +8,8 @@ With the Online Journal app, you can easily add and track the topics you are lea
 
 We hope you enjoy using the Online Journal app!
 
+![App Screenshot](learning_logs/static/images/am-i-responsive-img.jpg)
+
 [View the live project here](https://online-journal2022.herokuapp.com/ "Link to deployed site - Online Journal")
 
 ## Table of contents
@@ -17,22 +19,21 @@ We hope you enjoy using the Online Journal app!
 2. [Features](#Features)
     1. [Existing Features](#Existing-Features)
     2. [Features to Implement in the future](#Features-to-Implement-in-the-future)
-3. [Issues and Bugs](#Issues-and-Bugs)
-4. [Technologies Used](#Technologies-Used)
+3. [Technologies Used](#Technologies-Used)
      1. [Main Languages Used](#Main-Languages-Used)
      2. [Additional Languages Used](#Additional-Languages-Used)
      3. [Frameworks, Libraries & Programs Used](#Frameworks,-Libraries-&-Programs-Used)
-5. [Testing](#Testing)
+4. [Testing](#Testing)
      1. [Testing](TESTING)
-6. [Deployment](#Deployment)
+5. [Deployment](#Deployment)
      1. [Deploying on Heroku](#Deploying-on-Heroku)
      2. [Forking the Repository](#Forking-the-Repository)
      3. [Creating a Clone](#Creating-a-Clone)
-7. [Credits](#Credits)
+6. [Credits](#Credits)
      1. [Content](#Content)
      2. [Media](#Media)
      3. [Code](#Code)
-8. [Acknowledgements](#Acknowledgements)
+7. [Acknowledgements](#Acknowledgements)
 ***
 ## UX 
 
@@ -167,12 +168,6 @@ The **Sura** font is a geometric sans-serif font designed by Carolina Giovagnoli
 
 - View analytics data about website usage:  Allow admin to view analytics data about website usage so he can understand how users are interacting with the website. 
 
-
-## Issues and Bugs 
-
-**Issue**
-- Unfortunately I haven't managed to resolve the issue of CSS not displaying on my deployed app.
-
 ## Technologies Used
 
 ### Languages Used
@@ -265,7 +260,40 @@ Automated unit testing was done within Django.
 
 
 ## Responsivness Testing
-In progress
+The app has been tested in Chrome with developer tools and showed to be fully responsive. In addition to Chrome developer tools the app has also been tested across other devices and browsers using [BrowserStack Live](https://live.browserstack.com/dashboard).
+- Mozzila Firefox 108 on Mac Ventura 
+
+![App Screenshot](learning_logs/static/images/firfefox-mac-img.jpg)
+
+- Microsoft Edge 108 on Mac Ventura 
+
+![App Screenshot](learning_logs/static/images/microsoft-edge-mac.jpg)
+
+- Opera 94 on Mac Ventura 
+
+![App Screenshot](learning_logs/static/images/opera-mac.jpg)
+
+- Microsoft Edge 108 on Windows 
+
+![App Screenshot](learning_logs/static/images/windows-edge.jpg)
+
+- Samsung Galaxy S8 
+
+![App Screenshot](learning_logs/static/images/galaxyS8.jpg)
+
+- Samsung Galaxy S22 on Chrome 
+
+![App Screenshot](learning_logs/static/images/galaxyS22-chrome.jpg)
+
+- Iphone 13 mini 
+
+![App Screenshot](learning_logs/static/images/iphone13-mini.jpg)
+
+
+
+
+
+
 
 ## HTML Testing
 
