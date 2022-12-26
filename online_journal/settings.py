@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     # My apps
     'learning_logs',
     'users',
-    'online_journal',
     # Default apps
     'django.contrib.admin',
     'django.contrib.auth',
