@@ -13,10 +13,8 @@ from django.contrib.messages import constants as messages
 import mimetypes
 
 
-if os.path.isfile("env.py"):
-    import env
-
 development = os.environ.get('DEVELOPMENT', False)
+
 
 MESSAGE_TAGS = {
         messages.DEBUG: 'alert-secondary',
@@ -29,23 +27,27 @@ MESSAGE_TAGS = {
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = os.environ.get('SECRET_KEY')
+
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
+
 DEBUG = development
 
+
 # Application definition
+
 
 INSTALLED_APPS = [
     # My apps
@@ -64,6 +66,8 @@ INSTALLED_APPS = [
     'tinymce',
     'crispy_forms',
 ]
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -74,14 +78,18 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-SITE_ID = 1
 
 ROOT_URLCONF = 'online_journal.urls'
+
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
+            [TEMPLATES_DIR],
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -93,11 +101,11 @@ TEMPLATES = [
         },
     },
 ]
-WSGI_APPLICATION = 'online_journal.wsgi.application'
 
+
+WSGI_APPLICATION = 'online_journal.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
 if development:
     DATABASES = {
         'default': {
@@ -111,11 +119,8 @@ else:
     }
 if development:
     ALLOWED_HOSTS = ['localhost']
-
-
 else:
     ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
-    ALLOWED_HOSTS = ["online-journal2022.herokuapp.com"]
 
 
 # Password validation
@@ -137,36 +142,42 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
+
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'))
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CSRF_TRUSTED_ORIGINS = ['online-journal2022.herokuapp.com']
-
 LOGIN_URL = 'users:login'
 
+
 # Cloudinary Settings
+
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'dd9o1h7oh',
     'API_KEY': '522695269739824',
     'API_SECRET': 'oa4_FiNurIBFcShGyu3gXGAEpeM',
 }
-
 mimetypes.add_type("text/css", ".css", True)
