@@ -148,6 +148,9 @@ p {
     margin-bottom: 10rem;
 }
 
+.pt-2 {
+    margin-bottom: revert;
+}
 /* Index Html */
 
 

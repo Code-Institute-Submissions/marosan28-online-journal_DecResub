@@ -103,7 +103,6 @@ We hope you enjoy using the Online Journal app!
  Below is the colour scheme used in this project. 
  
 - Lavender Web <span style="color: #dedef3;">&#x25A0;</span>
-- Beige <span style="color: #f5f5dc;">&#x25A0;</span>
 - Black <span style="color: #000000;">&#x25A0;</span>
 - White <span style="color: #ffffff;">&#x25A0;</span>
 - Light Gray <span style="color: #d3d3d3;">&#x25A0;</span>
@@ -111,8 +110,6 @@ We hope you enjoy using the Online Journal app!
 How the colors have been used in this app:
 
 Lavender Web (#dedef3) - This is a soft, muted shade of purple that was used as a background color for the journaling app. Its calming nature can help users focus and relax while writing.
-
-Beige (#f5f5dc) - This is a light, neutral color that was used for text and other design elements in the journaling app. It is easy on the eyes and helps create a clean, uncluttered look.
 
 Black (#000000) - Black is a classic color that was used for text and other design elements in the journaling app. It is a strong, bold color that can help create contrast and make text stand out.
 

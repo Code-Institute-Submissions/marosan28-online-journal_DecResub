@@ -2,12 +2,18 @@ from django.db import models
 from django import forms
 import re
 
+def validate_non_numeric(value):
+    if value.isnumeric():
+        raise forms.ValidationError("Topic cannot be numerical only.")
+
+def validate_special_characters(value):
+    if re.search(r'[^a-zA-Z0-9]', value):
+        raise forms.ValidationError("Special characters are not allowed.")
 
 class Topic(models.Model):
     """Topic the user is interested in."""
-    text = models.CharField(max_length=200)
+    text = models.CharField(max_length=200, validators=[validate_non_numeric, validate_special_characters])
     date_added = models.DateTimeField(auto_now_add=True)
-
 
     def __str__(self):
         """Return a string representation of a model"""
@@ -36,6 +42,7 @@ def validate_length(value):
 
 class EntryModelForm(forms.ModelForm):
     text = forms.CharField(
+        label='',
         widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 4}),
         validators=[non_numeric, validate_length]
     )
@@ -49,19 +56,11 @@ class EmailAddress(models.Model):
     email = models.EmailField(unique=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
-def validate_non_numeric(value):
-    if value.isnumeric():
-        raise forms.ValidationError("Topic cannot be numerical only.")
-
-def validate_special_characters(value):
-    if re.search(r'[^a-zA-Z0-9]', value):
-        raise forms.ValidationError("Special characters are not allowed.")
 
 class TopicsForm(forms.ModelForm):
     class Meta:
         model = Topic
-        fields = ['topic_name']
+        fields = ['text']
         widgets = {
-            'topic_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'text': forms.TextInput(attrs={'class': 'form-control'}),
         }
-    topic_name = forms.CharField(max_length=250, validators=[validate_non_numeric, validate_special_characters],label ='')
