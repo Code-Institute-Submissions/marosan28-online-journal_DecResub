@@ -160,7 +160,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = ['/workspace/online-journal/learning_logs/static']
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
@@ -175,5 +175,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CSRF_TRUSTED_ORIGINS = ['online-journal2022.herokuapp.com']
 
 LOGIN_URL = 'users:login'
+
+# Cloudinary Settings
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dd9o1h7oh',
+    'API_KEY': '522695269739824',
+    'API_SECRET': 'oa4_FiNurIBFcShGyu3gXGAEpeM',
+}
 
 mimetypes.add_type("text/css", ".css", True)
