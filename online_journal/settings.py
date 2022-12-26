@@ -16,6 +16,9 @@ from django.contrib.messages import constants as messages
 import mimetypes
 
 
+if os.path.isfile("env.py"):
+    import env
+
 development = os.environ.get('DEVELOPMENT', False)
 
 MESSAGE_TAGS = {
@@ -28,7 +31,7 @@ MESSAGE_TAGS = {
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 
@@ -36,7 +39,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', '')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
@@ -72,16 +75,14 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+SITE_ID = 1
+
 ROOT_URLCONF = 'online_journal.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            os.path.join(BASE_DIR, 'templates'),
-            os.path.join(BASE_DIR, 'templates', 'allauth'),
-            [TEMPLATES_DIR],
-        ],
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,7 +119,7 @@ if development:
 
 
 else:
-    ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
+    ALLOWED_HOSTS = ["online-journal2022.herokuapp.com"]
 
 
 # Password validation
@@ -174,13 +175,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CSRF_TRUSTED_ORIGINS = ['online-journal2022.herokuapp.com']
 
 LOGIN_URL = 'users:login'
-
-# Cloudinary Settings
-
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dd9o1h7oh',
-    'API_KEY': '522695269739824',
-    'API_SECRET': 'oa4_FiNurIBFcShGyu3gXGAEpeM',
-}
 
 mimetypes.add_type("text/css", ".css", True)
