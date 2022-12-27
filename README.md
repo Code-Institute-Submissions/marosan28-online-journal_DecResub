@@ -124,6 +124,36 @@ Overall, the colors in this palette are chosen to be non-distracting and calming
 
 The **Sura** font is a geometric sans-serif font designed by Carolina Giovagnoli. It is a modern and clean font with a straightforward, no-nonsense design. The geometric shapes and clean lines of Sura give it a strong, futuristic look that is ideal for technology-focused projects. Sura was used for headings and other spotlight elements to create a clean, modern look.  For the body font I choose **Merriweather**. Merriweather is a serif font that is clean and modern, with a slightly more formal and traditional feel than Sura. I used it to provide a nice contrast to Sura's strong, geometric style.
 
+
+#### Wireframes
+
+Balsamiq has been used to create wireframes for this project. 
+
+Index page 
+![App Screenshot](learning_logs/static/images/index.jpg)
+
+Base page 
+![App Screenshot](learning_logs/static/images/base.jpg)
+
+Login page 
+![App Screenshot](learning_logs/static/images/login.jpg)
+
+Register page 
+![App Screenshot](learning_logs/static/images/register.jpg)
+
+Topics page 
+![App Screenshot](learning_logs/static/images/topics.jpg)
+
+Topic page 
+![App Screenshot](learning_logs/static/images/topic.jpg)
+
+Add new topic page 
+![App Screenshot](learning_logs/static/images/topic.jpg)
+
+Add new entry page 
+![App Screenshot](learning_logs/static/images/new-entry.jpg)
+
+
 ## Features
 
 1. Topic tracking and revisiting - Our app allows users to log in topics they are interested in as a way of tracking and revisiting the information. This feature is useful for users who want to keep track of their interests and learn more about specific subjects.
@@ -350,6 +380,7 @@ In addition to using the W3C CSS Validator, the app's CSS was also manually test
 # Deployment
 
 ## Deploying-on-Heroku
+
 To deploy this project on Heroku, the following steps were taken:
 
 1. Create a new app on Heroku and choose a name and location for it.
@@ -363,29 +394,42 @@ To deploy this project on Heroku, the following steps were taken:
 8. Update the DIRS in TEMPLATES with the TEMPLATES_DIR value, and update ALLOWED_HOSTS with ['app_name.heroku.com', 'localhost'].
 9. Create media, storage, and templates directories in the main project directory, and add a Procfile with the following content: "web: gunicorn project-name.wsgi".
 10. Log in to Heroku using the terminal and run the command "heroku git:remote -a your_app_name_here" to link the app to the GitPod workspace.
-11. To deploy new versions of the app, run the command "git push heroku main" in the termina
+11. To deploy new versions of the app, run the command "git push heroku main" in the terminal
+
+## Forking the Repository
+
+1. Make sure you have a GitHub account. If you don't have one, you can create an account by going to https://github.com and following the prompts.
+2. Go to the GitHub page for the repository you want to fork.
+3. In the top right corner of the page, click the "Fork" button. This will create a copy of the repository in your account.
+4. You can then clone the repository to your local machine by following the steps in the "Creating a clone" section above, replacing USERNAME with your own GitHub username and REPOSITORY with the name of the repository.
+5. Once you have a copy of the repository on your local machine, you can make changes to it and commit those changes back to your fork on GitHub. You can also create a pull request to submit your changes to the original repository for review.
+
+It's generally a good idea to keep your fork up to date with the original repository by regularly syncing your fork with the upstream repository. To do this, you can add the original repository as an upstream repository and then use the git pull command to sync your fork with the upstream repository.
+
+## Creating a clone
+
+1. Make sure you have Git installed on your local machine. You can check if you have it installed by running the command git --version in your terminal.
+2. Navigate to the directory where you want to create a copy of the repository.
+3. Run the command git clone https://github.com/USERNAME/REPOSITORY.git, replacing USERNAME with the username of the repository owner and REPOSITORY with the name of the repository. In this specific case (https://github.com/marosan28/online-journal.git) This will create a copy of the repository in a new directory with the same name as the repository.
+4. Change into the new directory by running the command cd REPOSITORY, replacing REPOSITORY with the name of the repository.
+5. Run the command git branch to see a list of available branches in the repository.
+6. To switch to a specific branch, run the command git checkout BRANCHNAME, replacing BRANCHNAME with the name of the branch you want to switch to.
+
+# Credits
+
+## Content 
+
+For finding website content I was using [Google](https://www.google.com)
+
+## Media
+For creating the website logo I used [Canva](https://www.canva.com/hr_hr/)
+
+## Code
+I used [this](https://pylessons.com/django-subscribe) tutorial for creating a newsletter form
 
 
+# Acknowledgements
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Credits
 - Python crash course book by Eric Matthes
 - Slack community
 - Tutor support
