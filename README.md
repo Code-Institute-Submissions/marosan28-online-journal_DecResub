@@ -289,11 +289,20 @@ The app has been tested in Chrome with developer tools and showed to be fully re
 
 ![App Screenshot](learning_logs/static/images/iphone13-mini.jpg)
 
+- Safari on iPad Pro 12.9 2022
+
+![App Screenshot](learning_logs/static/images/ipad.jpg)
 
 
+### Lighthouse Testing
 
+- Lighthouse testing for mobile devices
 
+![App Screenshot](learning_logs/static/images/lighthouse-mobile.jpg)
 
+- Lighthouse testing for pc
+
+![App Screenshot](learning_logs/static/images/lighthouse-pc.jpg)
 
 ## HTML Testing
 
@@ -324,8 +333,6 @@ The app has been tested in Chrome with developer tools and showed to be fully re
 |                  |        |4. No p element in scope but a p end tag seen.                           |4. Could not fix, included in django template as well  |
 
 
-
-
 ## CSS Testing
 
 The app's CSS file was tested using W3C CSS Validator. The CSS was free of errors and passed the validation process.
@@ -339,6 +346,24 @@ The app's CSS file was tested using W3C CSS Validator. The CSS was free of error
 </p>
 
 In addition to using the W3C CSS Validator, the app's CSS was also manually tested by visually inspecting the app's pages in various web browsers to ensure that the styles were being applied correctly and consistently across different devices and platforms.
+
+# Deployment
+
+## Deploying-on-Heroku
+To deploy this project on Heroku, the following steps were taken:
+
+1. Create a new app on Heroku and choose a name and location for it.
+2. In the Resources tab, add a Postgres database to the app by selecting the "Heroku Postgres" option under add-ons.
+3. In the Settings tab, reveal the Config Vars and copy the url next to DATABASE_URL.
+4. In the project's GitPod workspace, create an env.py file and add the DATABASE_URL and SECRET_KEY values to it.
+5. Update the project's settings.py file to import the env file and add the SECRET_KEY and DATABASE_URL file paths.
+6. Update the Config Vars with the Cloudinary URL, and also update the settings.py file with this URL.
+7. In the settings.py file, add Cloudinary to the INSTALLED_APPS list, and add values for STATICFILE_STORAGE, STATICFILES_DIRS,   
+   STATIC_ROOT, MEDIA_URL, DEFAULT_FILE_STORAGE, and TEMPLATES_DIR.
+8. Update the DIRS in TEMPLATES with the TEMPLATES_DIR value, and update ALLOWED_HOSTS with ['app_name.heroku.com', 'localhost'].
+9. Create media, storage, and templates directories in the main project directory, and add a Procfile with the following content: "web: gunicorn project-name.wsgi".
+10. Log in to Heroku using the terminal and run the command "heroku git:remote -a your_app_name_here" to link the app to the GitPod workspace.
+11. To deploy new versions of the app, run the command "git push heroku main" in the termina
 
 
 
