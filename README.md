@@ -210,7 +210,7 @@ Add new entry page
 ## Frameworks - Libraries - Programs Used
 - [Django](https://www.djangoproject.com/)
 - [Django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
-- [PostgreSQL](https://www.postgresql.org/)
+- [ElephantSQL](https://www.elephantsql.com/)
 - [Heroku](https://dashboard.heroku.com/login)
 - [Google Fonts](https://fonts.google.com/ "Link to Google Fonts")
 
